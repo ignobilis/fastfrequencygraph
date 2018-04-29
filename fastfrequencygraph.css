@@ -1,0 +1,31 @@
+.ffgContainer {
+  position: absolute;
+}
+
+.ffgRow {
+  position: relative;
+}
+
+.ffgCell {
+  float: left;
+  border-style: none solid solid none;
+  display: flex;
+  align-items: center;
+}
+
+.ffgFirstColumn {
+  border-left: solid;
+}
+
+.ffgFirstRow {
+  border-top: solid;
+}
+
+.ffgRowLabel {
+  position: relative;
+  left: 5px;
+}
+
+.ffgColumnLabel {
+  margin: auto;
+}

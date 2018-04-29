@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>FAST Frequency Graph Test</title>
+  <meta name="author" content="Hendrik">
+  <meta name="description" content="FAST Frequency Graph Test">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="normalize.css" rel="stylesheet">
+  <link href="FASTFrequencyGraph.css" rel="stylesheet">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="FASTFrequencyGraph.js"></script>
+</head>
+
+<body>
+
+  <div id="ffg"></div>
+
+  <script>
+    var data = [
+      ['Weighbridge Entries', 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+      ['UPC', 32, 27, 25, 25, 24, 29, 39],	  
+      ['Kembali', 12, 14, 8, 18, 16, 9, 4],	  
+      ['SBL', 10, 11, 15, 8, 11, 10, 9]
+    ];
+  
+    var ffg = new FASTFrequencyGraph('ffg',null,{
+	  cellBorderWidth: 1,
+	  cellIsSquare: true,
+	  firstColumnRatio: 3,
+	  marginLeft: 15,
+      marginRight: 15,
+	  marginTop: 15,
+	  maxWidth: 700
+	});
+
+	ffg.data = data;
+
+    $(window).resize(function () {
+	  ffg.refresh();
+    });
+
+	ffg.refresh();
+  </script>
+</body>
+
+</html>
